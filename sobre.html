@@ -14,10 +14,13 @@
       color: #fff; /* Texto branco */
     }
     .navbar {
-      background-color: #333; /* Navbar em cinza escuro */
+      background-color: #000; /* Navbar em preto */
     }
     .navbar-brand, .nav-link {
-      color: #ffffff; /* Letras brancas na navbar */
+      color: #fff; /* Letras brancas na navbar */
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ccc; /* Cor do texto ao passar o mouse */
     }
     .container {
       margin-top: 50px;
@@ -31,15 +34,15 @@
       background-color: #333; /* Fundo do rodapé em cinza escuro */
       color: #fff; /* Texto branco no rodapé */
     }
-    .navbar-brand, .nav-link, .footer p {
-      color: #fff; /* Letras brancas */
+    .footer p {
+      color: #fff; /* Letras brancas no rodapé */
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light">
+  <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#">Lc's Hamburgueria</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
