@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lc's Hamburgueria</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- jQuery, Popper.js e Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    html, body {
+      height: auto;
+      margin: 0 auto;
+      background-color: #000; /* Fundo preto */
+      color: #fff; /* Texto branco */
+      overflow: hidden; /* Evita scroll */
+    }
+    .navbar, .footer {
+      background-color: #333; /* Navbar e footer em cinza escuro */
+    }
+    .navbar-brand, .nav-link, .footer p {
+      color: #fff; /* Letras brancas */
+    }
+    .carousel, .carousel-item {
+      height: 100vh; /* Altura da tela inteira */
+      display: flex;
+      justify-content: center;
+      align-items: center; /* Centraliza verticalmente */
+    }
+    .carousel-item img {
+      max-width: 80%; /* Limita a largura da imagem */
+      max-height: 80%; /* Limita a altura da imagem */
+      object-fit: contain; /* A imagem mantém a proporção */
+      margin: auto; /* Centraliza horizontalmente */
+    }
+    .carousel-caption h5,
+    .carousel-caption p {
+      color: #fff; /* Cor do texto do carousel */
+    }
+    .container {
+      margin-top: 50px;
+    }
+    .img-small {
+      width: 100%;
+      max-width: 150px; /* Limita a largura das imagens pequenas */
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Lc's Hamburgueria</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="produtos.html">Produtos</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Quem Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="meuCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Imagens do Carousel -->
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="IMG/y.jpeg" class="d-block" alt="Imagem do Carousel 1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Bem-vindo à Lc's Hamburgueria</h5>
+          <p>Os melhores hambúrgueres da cidade</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#meuCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Anterior</span>
+    </a>
+    <a class="carousel-control-next" href="#meuCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Próximo</span>
+    </a>
+  </div>
+
+  <!-- Seção "Quem Somos" -->
+  <div class="container">
+    <h1>Quem Somos</h1>
+    <p>A Lc's Hamburgueria foi fundada em 2020 com o sonho de oferecer os melhores hambúrgueres da cidade. Desde o início, nossa missão sempre foi proporcionar uma experiência única para os amantes de hambúrgueres, combinando qualidade, sabor e um atendimento excepcional.</p>
+
+    <p>Com o passar dos anos, nossa hamburgueria se tornou um local de encontro para amigos e famílias, onde cada lanche é preparado com carinho e dedicação. Valorizamos ingredientes frescos e receitas exclusivas, garantindo que cada mordida seja inesquecível.</p>
+
+    <h2>Nossos Valores</h2>
+    <ul>
+      <li>Qualidade: Usamos apenas ingredientes selecionados.</li>
+      <li>Atendimento: Nossa equipe está sempre pronta para atender você.</li>
+      <li>Inovação: Estamos sempre criando novos sabores para surpreender nossos clientes.</li>
+    </ul>
+
+    <h2>Imagens da Nossa História</h2>
+    <div class="d-flex flex-wrap">
+      <img src="IMG/image1.jpeg" class="img-small" alt="História 1">
+      <img src="IMG/image2.jpeg" class="img-small" alt="História 2">
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer text-center py-3">
+    <p>&copy; 2024 Lc's Hamburgueria. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>

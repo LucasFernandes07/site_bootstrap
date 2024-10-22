@@ -1,0 +1,190 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos - Lc's Hamburgueria</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      background-color: #000; /* Fundo preto */
+      color: #fff; /* Texto branco */
+    }
+    .navbar, .footer {
+      background-color: #333; /* Navbar e footer em cinza escuro */
+    }
+    .navbar-brand, .nav-link, .footer p {
+      color: #fff; /* Letras brancas */
+    }
+    .product-card {
+      margin: 20px;
+      background-color: #222; /* Fundo escuro nos cards */
+    }
+    .img-product {
+      width: 100%;
+      height: auto;
+    }
+    .btn-custom {
+      background-color: #28a745; /* Cor verde */
+      color: white;
+    }
+    .btn-link {
+      color: #fff; /* Texto branco no botão link */
+    }
+    /* Deixar o texto preto dentro do modal */
+    .modal-content {
+      color: #000; /* Texto preto no modal */
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Lc's Hamburgueria</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="produtos.html">Produtos <span class="sr-only">(current)</span></a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Quem Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Seção de Produtos -->
+  <div class="container">
+    <h1 class="mt-4">Nossos Produtos</h1>
+    <div class="row">
+      <!-- Produto 1 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="IMG/CLASSIC.jpeg" class="card-img-top img-product" alt="Classic Lc">
+          <div class="card-body">
+            <h5 class="card-title">Classic Lc</h5>
+            <p class="card-text">Um delicioso hambúrguer com carne suculenta, queijo, alface e tomate.</p>
+            <button class="btn btn-custom">Comprar</button>
+            <button class="btn btn-link" data-toggle="modal" data-target="#modalClassic">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Classic Lc -->
+      <div class="modal fade" id="modalClassic" tabindex="-1" role="dialog" aria-labelledby="modalClassicLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalClassicLabel">Classic Lc</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              O Classic Lc é o carro-chefe da nossa hamburgueria. Feito com carne 100% bovina, queijo derretido, alface crocante e tomate fresco, ele oferece uma combinação perfeita de sabor e qualidade.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="IMG/BBQ.jpeg" class="card-img-top img-product" alt="Lc BBQ">
+          <div class="card-body">
+            <h5 class="card-title">Lc BBQ</h5>
+            <p class="card-text">Hambúrguer premium com ingredientes selecionados e sabor inigualável.</p>
+            <button class="btn btn-custom">Comprar</button>
+            <button class="btn btn-link" data-toggle="modal" data-target="#modalBBQ">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Lc BBQ -->
+      <div class="modal fade" id="modalBBQ" tabindex="-1" role="dialog" aria-labelledby="modalBBQLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalBBQLabel">Lc BBQ</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              O Lc BBQ traz o autêntico sabor do churrasco americano para o seu paladar, com molho barbecue caseiro, cebolas caramelizadas e bacon crocante, combinado com um hambúrguer suculento.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="IMG/DUPLO.jpeg" class="card-img-top img-product" alt="Duplo Lc">
+          <div class="card-body">
+            <h5 class="card-title">Duplo Lc</h5>
+            <p class="card-text">Sabor surpreendente com ingredientes 100% frescos e selecionados.</p>
+            <button class="btn btn-custom">Comprar</button>
+            <button class="btn btn-link" data-toggle="modal" data-target="#modalDuplo">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Duplo Lc -->
+      <div class="modal fade" id="modalDuplo" tabindex="-1" role="dialog" aria-labelledby="modalDuploLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="modalDuploLabel">Duplo Lc</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              O Duplo Lc é para quem ama carne! Com dois hambúrgueres suculentos, queijo duplo e ingredientes frescos, este lanche é perfeito para quem busca saciar sua fome com muito sabor.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer class="footer text-center py-3">
+    <p>&copy; 2024 Lc's Hamburgueria. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- jQuery, Popper.js e Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
