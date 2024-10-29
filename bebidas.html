@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cardapio - Lc's Hamburgueria</title>
+  <title>Produtos - Lc's Hamburgueria</title>
   
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -57,12 +57,12 @@
         
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Cardapio
+            Produtos
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="produtos.html">Lanches</a>
-            <a class="dropdown-item" href="combos.html">Combos</a>
-            <a class="dropdown-item" href="">Bebidas</a>
+            <a class="dropdown-item" href="#">Combos</a>
+            <a class="dropdown-item" href="bebidas.html">Bebidas</a>
           </div>
         </li>
 
@@ -81,16 +81,16 @@
 
   <!-- Conteúdo dos Produtos -->
 <div class="container">
-  <h1 class="mt-4">Nossos Lanches</h1>
+  <h1 class="mt-4">Nossos Produtos</h1>
   <div class="row">
       <!-- Card de Produto 1 -->
       <div class="col-md-4">
           <div class="card product-card">
               <img src="IMG/CLASSIC.jpeg" class="card-img-top img-product" alt="Classic Lc">
               <div class="card-body">
-                  <h5 class="card-title">Classic Lc</h5>
-                  <p class="card-text">Um delicioso hambúrguer com carne suculenta, queijo, alface e tomate.</p>
-                  <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraClassic">Comprar</button>
+                  <h5 class="card-title">Classic Lc Combo</h5>
+                  <p class="card-text">Nosso lanche Classic Lc com Batata Frita e Refrigerante.</p>
+                  <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraClassicCombo">Comprar</button>
                   <button class="btn btn-link" data-toggle="modal" data-target="#modalClassic">Saiba Mais</button>
               </div>
           </div>
@@ -101,14 +101,14 @@
           <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-header">
-                      <h5 class="modal-title" id="modalCompraClassicLabel">Comprar Classic Lc</h5>
+                      <h5 class="modal-title" id="modalCompraClassicLabel">Comprar Classic Lc Combo</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                       </button>
                   </div>
                   <div class="modal-body">
-                      <p>Preço: R$ 19,90</p>
-                      <p>Você deseja confirmar a compra do Classic Lc?</p>
+                      <p>Preço: R$ 38,79</p>
+                      <p>Você deseja confirmar a compra do Classic Lc Combo?</p>
                   </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -129,7 +129,7 @@
                       </button>
                   </div>
                   <div class="modal-body">
-                      <p>O Classic Lc é um dos nossos hambúrgueres mais populares, feito com carne de alta qualidade, queijo derretido, alface crocante e tomates frescos, tudo servido em um pão macio.</p>
+                      <p>Especial oferta de nosso novo combo com nosso Hambuguer Clasic e Batata frita e Refrigerante.</p>
                       <p>É perfeito para quem busca um lanche saboroso e satisfatório, ideal para qualquer hora do dia!</p>
                   </div>
                   <div class="modal-footer">
@@ -144,7 +144,7 @@
           <div class="card product-card">
               <img src="IMG/BBQ.jpeg" class="card-img-top img-product" alt="Lc BBQ">
               <div class="card-body">
-                  <h5 class="card-title">Lc BBQ</h5>
+                  <h5 class="card-title">Combo Lc BBQ</h5>
                   <p class="card-text">Hambúrguer premium com ingredientes selecionados e sabor inigualável.</p>
                   <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraBBQ">Comprar</button>
                   <button class="btn btn-link" data-toggle="modal" data-target="#modalBBQ">Saiba Mais</button>
@@ -157,14 +157,14 @@
           <div class="modal-dialog" role="document">
               <div class="modal-content">
                   <div class="modal-header">
-                      <h5 class="modal-title" id="modalCompraBBQLabel">Comprar Lc BBQ</h5>
+                      <h5 class="modal-title" id="modalCompraBBQLabel">Comprar Combo Lc BBQ</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                       </button>
                   </div>
                   <div class="modal-body">
-                      <p>Preço: R$ 24,90</p>
-                      <p>Você deseja confirmar a compra do Lc BBQ?</p>
+                      <p>Preço: R$ 40,53</p>
+                      <p>Você deseja confirmar a compra do Combo Lc BBQ?</p>
                   </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
@@ -185,7 +185,7 @@
                       </button>
                   </div>
                   <div class="modal-body">
-                      <p>O Lc BBQ é um hambúrguer premium, feito com ingredientes selecionados que proporcionam um sabor inigualável. Coberto com nosso molho especial BBQ e acompanhado de cebola caramelizada, é um verdadeiro deleite!</p>
+                      <p>Nossa nova oferta Com nosso Lanche Mais Vendido "Lc BBQ" acompanhado com Batata Frita e Refrigerante!</p>
                   </div>
                   <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
