@@ -12,36 +12,34 @@
     html, body {
       height: 100%;
       margin: 0;
-      background-color: #000; /* Fundo preto */
-      color: #fff; /* Texto branco */
+      background-color: #000;
+      color: #fff;
     }
     .navbar, .footer {
-      background-color: #333; /* Navbar e footer em cinza escuro */
+      background-color: #333;
     }
-    .navbar-brand, .nav-link, .footer p {
-      color: #fff; /* Letras brancas */
+    .navbar-brand, .nav-link {
+      color: #fff;
     }
     .product-card {
       margin: 20px;
-      background-color: #222; /* Fundo escuro nos cards */
+      background-color: #222;
     }
     .img-product {
       width: 100%;
       height: auto;
     }
     .btn-custom {
-      background-color: #28a745; /* Cor verde */
+      background-color: #28a745;
       color: white;
     }
     .btn-link {
-      color: #fff; /* Texto branco no botão link */
+      color: #fff;
     }
-    /* Deixar o texto preto dentro do modal */
     .modal-content {
-      color: #000; /* Texto preto no modal */
+      color: #000;
     }
   </style>
-
 </head>
 <body>
 
@@ -56,190 +54,203 @@
         <li class="nav-item">
           <a class="nav-link" href="index.html">Home</a>
         </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="produtos.html">Produtos <span class="sr-only">(current)</span></a>
-        </li>  
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Produtos
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Lanches</a>
+            <a class="dropdown-item" href="#">Combos</a>
+            <a class="dropdown-item" href="#">Bebidas</a>
+          </div>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link" href="sobre.html">Quem Somos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="contato.html">Contato</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" id="cart-link">Carrinho (0)</a>
+        </li>
       </ul>
     </div>
   </nav>
 
-  <!-- Seção de Produtos -->
-  <div class="container">
-    <h1 class="mt-4">Nossos Produtos</h1>
-    <div class="row">
-      <!-- Produto 1 -->
+  <!-- Conteúdo dos Produtos -->
+<div class="container">
+  <h1 class="mt-4">Nossos Produtos</h1>
+  <div class="row">
+      <!-- Card de Produto 1 -->
       <div class="col-md-4">
-        <div class="card product-card">
-          <img src="IMG/CLASSIC.jpeg" class="card-img-top img-product" alt="Classic Lc">
-          <div class="card-body">
-            <h5 class="card-title">Classic Lc</h5>
-            <p class="card-text">Um delicioso hambúrguer com carne suculenta, queijo, alface e tomate.</p>
-            <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraClassic">Comprar</button>
-            <button class="btn btn-link" data-toggle="modal" data-target="#modalClassic">Saiba Mais</button>
+          <div class="card product-card">
+              <img src="IMG/CLASSIC.jpeg" class="card-img-top img-product" alt="Classic Lc">
+              <div class="card-body">
+                  <h5 class="card-title">Classic Lc</h5>
+                  <p class="card-text">Um delicioso hambúrguer com carne suculenta, queijo, alface e tomate.</p>
+                  <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraClassic">Comprar</button>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#modalClassic">Saiba Mais</button>
+              </div>
           </div>
-        </div>
       </div>
 
       <!-- Modal de Compra Classic Lc -->
       <div class="modal fade" id="modalCompraClassic" tabindex="-1" role="dialog" aria-labelledby="modalCompraClassicLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalCompraClassicLabel">Comprar Classic Lc</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Preço: R$ 19,90</p>
-              <p>Você deseja confirmar a compra do Classic Lc?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Confirmar Compra</button>
-            </div>
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalCompraClassicLabel">Comprar Classic Lc</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p>Preço: R$ 19,90</p>
+                      <p>Você deseja confirmar a compra do Classic Lc?</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" id="confirmarCompraClassic">Confirmar Compra</button>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
 
-      <!-- Modal Classic Lc -->
+      <!-- Modal "Saiba Mais" Classic Lc -->
       <div class="modal fade" id="modalClassic" tabindex="-1" role="dialog" aria-labelledby="modalClassicLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalClassicLabel">Classic Lc</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              O Classic Lc é o carro-chefe da nossa hamburgueria. Feito com carne 100% bovina, queijo derretido, alface crocante e tomate fresco, ele oferece uma combinação perfeita de sabor e qualidade.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            </div>
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalClassicLabel">Saiba Mais sobre o Classic Lc</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p>O Classic Lc é um dos nossos hambúrgueres mais populares, feito com carne de alta qualidade, queijo derretido, alface crocante e tomates frescos, tudo servido em um pão macio.</p>
+                      <p>É perfeito para quem busca um lanche saboroso e satisfatório, ideal para qualquer hora do dia!</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
 
       <!-- Produto 2 -->
       <div class="col-md-4">
-        <div class="card product-card">
-          <img src="IMG/BBQ.jpeg" class="card-img-top img-product" alt="Lc BBQ">
-          <div class="card-body">
-            <h5 class="card-title">Lc BBQ</h5>
-            <p class="card-text">Hambúrguer premium com ingredientes selecionados e sabor inigualável.</p>
-            <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraBBQ">Comprar</button>
-            <button class="btn btn-link" data-toggle="modal" data-target="#modalBBQ">Saiba Mais</button>
+          <div class="card product-card">
+              <img src="IMG/BBQ.jpeg" class="card-img-top img-product" alt="Lc BBQ">
+              <div class="card-body">
+                  <h5 class="card-title">Lc BBQ</h5>
+                  <p class="card-text">Hambúrguer premium com ingredientes selecionados e sabor inigualável.</p>
+                  <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraBBQ">Comprar</button>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#modalBBQ">Saiba Mais</button>
+              </div>
           </div>
-        </div>
       </div>
 
       <!-- Modal de Compra Lc BBQ -->
       <div class="modal fade" id="modalCompraBBQ" tabindex="-1" role="dialog" aria-labelledby="modalCompraBBQLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalCompraBBQLabel">Comprar Lc BBQ</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Preço: R$ 24,90</p>
-              <p>Você deseja confirmar a compra do Lc BBQ?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Confirmar Compra</button>
-            </div>
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalCompraBBQLabel">Comprar Lc BBQ</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p>Preço: R$ 24,90</p>
+                      <p>Você deseja confirmar a compra do Lc BBQ?</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" id="confirmarCompraBBQ">Confirmar Compra</button>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
 
-      <!-- Modal Lc BBQ -->
+      <!-- Modal "Saiba Mais" Lc BBQ -->
       <div class="modal fade" id="modalBBQ" tabindex="-1" role="dialog" aria-labelledby="modalBBQLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalBBQLabel">Lc BBQ</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              O Lc BBQ traz o autêntico sabor do churrasco americano para o seu paladar, com molho barbecue caseiro, cebolas caramelizadas e bacon crocante, combinado com um hambúrguer suculento.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            </div>
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalBBQLabel">Saiba Mais sobre o Lc BBQ</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p>O Lc BBQ é um hambúrguer premium, feito com ingredientes selecionados que proporcionam um sabor inigualável. Coberto com nosso molho especial BBQ e acompanhado de cebola caramelizada, é um verdadeiro deleite!</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
 
       <!-- Produto 3 -->
       <div class="col-md-4">
-        <div class="card product-card">
-          <img src="IMG/DUPLO.jpeg" class="card-img-top img-product" alt="Duplo Lc">
-          <div class="card-body">
-            <h5 class="card-title">Duplo Lc</h5>
-            <p class="card-text">Sabor surpreendente com ingredientes 100% frescos e selecionados.</p>
-            <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraDuplo">Comprar</button>
-            <button class="btn btn-link" data-toggle="modal" data-target="#modalDuplo">Saiba Mais</button>
+          <div class="card product-card">
+              <img src="IMG/DUPLO.jpeg" class="card-img-top img-product" alt="Duplo Lc">
+              <div class="card-body">
+                  <h5 class="card-title">Duplo Lc</h5>
+                  <p class="card-text">Sabor surpreendente com ingredientes 100% frescos e selecionados.</p>
+                  <button class="btn btn-custom" data-toggle="modal" data-target="#modalCompraDuplo">Comprar</button>
+                  <button class="btn btn-link" data-toggle="modal" data-target="#modalDuplo">Saiba Mais</button>
+              </div>
           </div>
-        </div>
       </div>
 
       <!-- Modal de Compra Duplo Lc -->
       <div class="modal fade" id="modalCompraDuplo" tabindex="-1" role="dialog" aria-labelledby="modalCompraDuploLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalCompraDuploLabel">Comprar Duplo Lc</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Preço: R$ 29,90</p>
-              <p>Você deseja confirmar a compra do Duplo Lc?</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-              <button type="button" class="btn btn-primary">Confirmar Compra</button>
-            </div>
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalCompraDuploLabel">Comprar Duplo Lc</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p>Preço: R$ 29,90</p>
+                      <p>Você deseja confirmar a compra do Duplo Lc?</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                      <button type="button" class="btn btn-primary" id="confirmarCompraDuplo">Confirmar Compra</button>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
 
-      <!-- Modal Duplo Lc -->
+      <!-- Modal "Saiba Mais" Duplo Lc -->
       <div class="modal fade" id="modalDuplo" tabindex="-1" role="dialog" aria-labelledby="modalDuploLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="modalDuploLabel">Duplo Lc</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              O Duplo Lc é para quem ama carne! Com dois hambúrgueres suculentos, queijo duplo e ingredientes frescos, este lanche é perfeito para quem busca saciar sua fome com muito sabor.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-            </div>
+          <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="modalDuploLabel">Saiba Mais sobre o Duplo Lc</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                      </button>
+                  </div>
+                  <div class="modal-body">
+                      <p>O Duplo Lc é uma explosão de sabor com dois hambúrgueres suculentos, que garantem uma refeição farta e deliciosa. Preparado com ingredientes frescos e de alta qualidade, é ideal para os amantes de um bom lanche.</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-
-    </div>
   </div>
+</div>
+
 
   <!-- Rodapé -->
   <footer class="footer text-center py-3">
@@ -248,7 +259,33 @@
 
   <!-- jQuery, Popper.js e Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    let cartCount = 0;
+
+    function updateCartCount() {
+      document.getElementById('cart-link').innerText = `Carrinho (${cartCount})`;
+    }
+
+    document.getElementById('confirmarCompraClassic').addEventListener('click', function() {
+      cartCount++;
+      updateCartCount();
+      $('#modalCompraClassic').modal('hide');
+    });
+
+    document.getElementById('confirmarCompraBBQ').addEventListener('click', function() {
+      cartCount++;
+      updateCartCount();
+      $('#modalCompraBBQ').modal('hide');
+    });
+
+    document.getElementById('confirmarCompraDuplo').addEventListener('click', function() {
+      cartCount++;
+      updateCartCount();
+      $('#modalCompraDuplo').modal('hide');
+    });
+  </script>
 </body>
 </html>
